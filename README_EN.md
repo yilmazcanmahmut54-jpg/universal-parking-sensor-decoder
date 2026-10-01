@@ -1,4 +1,4 @@
-# Universal Parking Sensor Decoder
+# Universal Parking Sensor Arduino Decoder
 
 [Türkçe README](README.md)
 
