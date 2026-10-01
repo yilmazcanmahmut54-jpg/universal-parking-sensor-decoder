@@ -20,9 +20,9 @@ Bu proje **harici ekranı bulunan park sensörü kitleri** için geliştirilmiş
 
 - **+5V** — ekranın beslemesi
 - **GND / eksi (-)** — ortak şase
-- **SIGNAL** — sensör mesafe verisinin taşındığı veri hattı
+- **SIGNAL** — sensör mesafe verisinin taşındığı veri hattı. Bu tip ekranlı park sensörü kitlerinde **SIGNAL kablosu genellikle sarı renktedir**.
 
-Arduino ile veri okumak için **+5V hattı Arduino girişine bağlanmaz**. ECU'nun **GND** hattı Arduino GND'ye, **SIGNAL** hattı Arduino D2'ye bağlanır. Kablo renklerine güvenmeyin; pinleri ölçerek doğrulayın.
+Arduino ile veri okumak için **+5V hattı Arduino girişine bağlanmaz**. ECU'nun **GND** hattı Arduino GND'ye, **SIGNAL** hattı Arduino D2'ye bağlanır. SIGNAL kablosu genellikle sarı olsa da üreticiye göre renk değişebilir. Bu nedenle yalnızca kablo rengine güvenmeyin; +5V, GND ve SIGNAL pinlerini ölçerek doğrulayın.
 
 ## Bağlantı
 | Park sensörü ECU | Arduino |
