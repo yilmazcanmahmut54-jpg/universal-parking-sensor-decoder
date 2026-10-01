@@ -1,6 +1,6 @@
 /*
   Universal Parking Sensor ECU Decoder
-  Tested: Arduino Uno / Mega 2560
+  Tested: Arduino
   SIGNAL: D2 (INT0)
   Serial: 115200
 
