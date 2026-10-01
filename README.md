@@ -81,5 +81,10 @@ Yeni veya farklı bir ECU'nun aynı protokolü kullanıp kullanmadığını gör
 ## Not
 Bu proje belirli bir ECU üzerinde deneysel olarak doğrulanmıştır. “Universal” adı, kodun farklı benzer kitlere uyarlanabilmesi amacıyla kullanılmıştır; bütün üreticilerle otomatik uyumluluk iddiası değildir.
 
+## İlham / Referans
+Bu çalışma, [morcibacsi/esp32_rmt_chinese_parking_aid](https://github.com/morcibacsi/esp32_rmt_chinese_parking_aid) projesinden **esinlenerek** başlatılmıştır. Söz konusu proje, ekranlı bir park sensörü sisteminin tek SIGNAL hattındaki verinin mikrodenetleyici ile okunabileceğini göstermiştir.
+
+Bu repodaki protokol çözümleme, timing değerleri, 17-bit frame yapısı, A/B/C/D kanal haritalaması, mesafe formülü ve Arduino kodları ise kullandığımız farklı park sensörü ECU'su üzerinde yaptığımız **kendi ölçüm ve testlerimizle** elde edilmiştir. Referans projedeki ECU'nun protokol ve zamanlamaları bizim test ettiğimiz ECU ile aynı değildir.
+
 ## Lisans
 MIT License.
