@@ -2,13 +2,12 @@
 
 [English README](README_EN.md)
 
-Arduino Uno/Mega kullanarak, harici ekranlı 4 sensörlü ultrasonik park sensörü ECU'larının **tek hatlı SIGNAL çıkışını** çözmek için geliştirilmiş açık kaynak proje.
+Arduino kullanarak, harici ekranlı 4 sensörlü ultrasonik park sensörü ECU'larının **tek hatlı SIGNAL çıkışını** çözmek için geliştirilmiş açık kaynak proje.
 
 > Bu protokol gerçek bir park sensörü ECU'su üzerinde osiloskop/zaman ölçümleri ve kontrollü mesafe testleriyle tersine mühendislik yöntemiyle çıkarılmıştır. Benzer görünümlü tüm kitlerin aynı protokolü kullandığı garanti edilmez.
 
 ## Test edilen donanım
-- Arduino Uno
-- Arduino Mega 2560
+- Arduino
 - 4 sensörlü park sensörü ECU
 - ECU ekranına giden SIGNAL hattı
 - Ortak GND
@@ -32,7 +31,7 @@ Arduino ile veri okumak için **+5V hattı Arduino girişine bağlanmaz**. ECU'n
 
 ECU kendi normal beslemesiyle çalıştırılır.
 
-**Önemli:** SIGNAL hattını Arduino'ya bağlamadan önce voltajını ölçün. Bu projede test edilen ECU doğrudan Uno/Mega ile çalışmıştır; farklı ECU'larda seviye dönüştürücü veya giriş koruması gerekebilir.
+**Önemli:** SIGNAL hattını Arduino'ya bağlamadan önce voltajını ölçün. Bu projede test edilen ECU doğrudan Arduino ile çalışmıştır; farklı ECU'larda seviye dönüştürücü veya giriş koruması gerekebilir.
 
 ## Protokol özeti
 Bir veri çerçevesi 17 bittir:
