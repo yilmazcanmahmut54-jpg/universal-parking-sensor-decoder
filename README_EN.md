@@ -6,6 +6,18 @@ Open-source Arduino decoder for the single-wire display SIGNAL output used by a 
 
 The protocol was empirically reverse-engineered from real timing captures and controlled distance measurements. Similar-looking parking sensor kits are **not guaranteed** to use the same protocol.
 
+## Compatible parking sensor type
+
+This project is intended for **parking sensor kits with an external display**. On the tested system, the cable from the parking sensor ECU to the display has **3 wires**:
+
+- **+5V** — display power
+- **GND / negative (-)** — common ground
+- **SIGNAL** — carries the sensor distance data. On this type of parking sensor kit, the **SIGNAL wire is commonly yellow**.
+
+For Arduino data reading, the **+5V display wire is not connected to an Arduino input**. Connect ECU **GND to Arduino GND** and **SIGNAL to Arduino D2**.
+
+Although the SIGNAL wire is commonly yellow, wire colors can vary by manufacturer. Do not rely on color alone; verify +5V, GND and SIGNAL with measurements before connecting.
+
 ## Wiring
 
 | Parking ECU | Arduino |
@@ -59,6 +71,18 @@ A=50.0 cm | B=101.0 cm | C=100.0 cm | D=50.0 cm
 ```
 
 For measured calibration data and reverse-engineering details see [docs/PROTOKOL_TR.md](docs/PROTOKOL_TR.md).
+
+## Raw frame test
+
+To check whether a new or different ECU uses the same protocol, upload [raw_frame_test.ino](examples/raw_frame_test/raw_frame_test.ino).
+
+The test sketch displays the **17-bit raw frame**, detected **sensor channel**, **RAW value**, and calculated **distance** in Serial Monitor at 115200 baud.
+
+Example:
+
+```
+FRAME: 1 0000 0000 1100 1000 | SENSOR: A | RAW: 200 | DISTANCE: 100.0 cm
+```
 
 ## Compatibility
 “Universal” means the project is designed to be adapted to similar parking ECUs. It does not claim compatibility with every manufacturer or parking sensor kit.
