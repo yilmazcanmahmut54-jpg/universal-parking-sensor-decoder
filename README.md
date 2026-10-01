@@ -15,6 +15,15 @@ Arduino Uno/Mega kullanarak, harici ekranlı 4 sensörlü ultrasonik park sensö
 
 MYCAR entegrasyonunda Arduino Mega üzerinde 4 sensör aynı anda başarıyla okunmuştur.
 
+## Uyumlu park sensörü tipi
+Bu proje **harici ekranı bulunan park sensörü kitleri** için geliştirilmiştir. Test edilen sistemde park sensörü ECU'sundan ekrana giden sokette **3 kablo** bulunur:
+
+- **+5V** — ekranın beslemesi
+- **GND / eksi (-)** — ortak şase
+- **SIGNAL** — sensör mesafe verisinin taşındığı veri hattı
+
+Arduino ile veri okumak için **+5V hattı Arduino girişine bağlanmaz**. ECU'nun **GND** hattı Arduino GND'ye, **SIGNAL** hattı Arduino D2'ye bağlanır. Kablo renklerine güvenmeyin; pinleri ölçerek doğrulayın.
+
 ## Bağlantı
 | Park sensörü ECU | Arduino |
 |---|---|
@@ -66,6 +75,9 @@ Detaylı tersine mühendislik verileri: [docs/PROTOKOL_TR.md](docs/PROTOKOL_TR.m
 ```
 A=50.0 cm | B=101.0 cm | C=100.0 cm | D=50.0 cm
 ```
+
+## Ham veri test kodu
+Yeni veya farklı bir ECU'nun aynı protokolü kullanıp kullanmadığını görmek için [raw_frame_test.ino](examples/raw_frame_test/raw_frame_test.ino) örneğini yükleyin. Kod 17-bit frame, sensör kanalı, RAW değer ve hesaplanan mesafeyi Serial Monitor'de gösterir.
 
 ## Not
 Bu proje belirli bir ECU üzerinde deneysel olarak doğrulanmıştır. “Universal” adı, kodun farklı benzer kitlere uyarlanabilmesi amacıyla kullanılmıştır; bütün üreticilerle otomatik uyumluluk iddiası değildir.
