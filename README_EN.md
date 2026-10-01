@@ -87,5 +87,10 @@ FRAME: 1 0000 0000 1100 1000 | SENSOR: A | RAW: 200 | DISTANCE: 100.0 cm
 ## Compatibility
 “Universal” means the project is designed to be adapted to similar parking ECUs. It does not claim compatibility with every manufacturer or parking sensor kit.
 
+## Inspiration / Reference
+This work was started **inspired by** [morcibacsi/esp32_rmt_chinese_parking_aid](https://github.com/morcibacsi/esp32_rmt_chinese_parking_aid). That project demonstrated that data on the single SIGNAL wire of a parking sensor display system can be decoded with a microcontroller.
+
+The protocol decoding, timing values, 17-bit frame structure, A/B/C/D channel mapping, distance formula, and Arduino code in this repository were obtained from **our own measurements and tests** on a different parking sensor ECU. The reference project's ECU does not use the same protocol/timing as the ECU tested here.
+
 ## License
 MIT License.
