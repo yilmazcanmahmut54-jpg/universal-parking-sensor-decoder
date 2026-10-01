@@ -2,7 +2,7 @@
 
 [Türkçe README](README.md)
 
-Open-source Arduino Uno/Mega decoder for the single-wire display SIGNAL output used by a tested four-channel ultrasonic parking sensor ECU.
+Open-source Arduino decoder for the single-wire display SIGNAL output used by a tested four-channel ultrasonic parking sensor ECU.
 
 The protocol was empirically reverse-engineered from real timing captures and controlled distance measurements. Similar-looking parking sensor kits are **not guaranteed** to use the same protocol.
 
@@ -50,7 +50,7 @@ Open:
 
 `arduino/universal_parking_sensor_decoder/universal_parking_sensor_decoder.ino`
 
-Upload to an Uno or Mega 2560 and open Serial Monitor at 115200 baud.
+Upload to an Arduino and open Serial Monitor at 115200 baud.
 
 Example:
 
